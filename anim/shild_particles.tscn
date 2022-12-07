@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+resource_name = "shpar"
+script/source = "extends CPUParticles2D
+
+
+func _ready():
+	emitting=true
+"
+
+[node name="shild_particles" type="CPUParticles2D"]
+position = Vector2( 72, 74 )
+emitting = false
+amount = 250
+lifetime = 2.5
+one_shot = true
+speed_scale = 3.5
+explosiveness = 0.8
+randomness = 0.1
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 5.0
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, 0 )
+radial_accel = 35.0
+radial_accel_random = 0.1
+tangential_accel = 30.0
+tangential_accel_random = 0.5
+scale_amount = 6.0
+scale_amount_random = 0.5
+color = Color( 0.0358594, 0.347481, 0.597656, 1 )
+script = SubResource( 1 )
